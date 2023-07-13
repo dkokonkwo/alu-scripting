@@ -10,7 +10,6 @@ import json
 import requests
 
 
-
 def number_of_subscribers(subreddit):
     '''
     returns number of subcribers if subreddit
