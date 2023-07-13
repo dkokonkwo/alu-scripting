@@ -27,5 +27,3 @@ def top_ten(subreddit):
     children = subreddit_info.get('data').get('children')
     for child in children:
         print(child.get('data').get('title'))
-
-top_ten('programming')
