@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 
 '''
-Queries REDDIT API and returns number of 
+Queries REDDIT API and returns number of
 subscribers for a given subreddit
 '''
 
 
-import requests
 import json
+import requests
+
 
 
 def number_of_subscribers(subreddit):
