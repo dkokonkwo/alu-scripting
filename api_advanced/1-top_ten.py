@@ -14,7 +14,9 @@ def top_ten(subreddit):
     prints first 10 hot posts
     listed for a subreddit
     '''
-    subreddit_URL = 'https://www.reddit.com/r/{}/hot.json?limit=10'.format(subreddit)
+    subreddit_URL = 'https://www.reddit.com/r/{}/hot.json?limit=10'.format(
+        subreddit
+    )
     subreddit_info = requests.get(
         subreddit_URL,
         headers={'user-agent': 'user'},
