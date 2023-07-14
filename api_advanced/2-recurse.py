@@ -5,7 +5,7 @@ queries the Reddit API and returns a list containing the
 title of hot articles listed for a given subreddit
 '''
 
-
+import json
 import requests
 
 
