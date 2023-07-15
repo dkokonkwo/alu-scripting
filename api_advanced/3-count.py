@@ -25,9 +25,14 @@ def count_words(subreddit, word_list, after=None, count={}):
         word = word.lower()
         if word not in count.keys():
             count[word] = 0
-    try:
-        data = subreddit_info.json().get("data")
-    except:
+    if subreddit_info.status_code != 200:
+        print("Error: Failed to retrieve data from the Reddit API.")
+        return
+        
+    data = subreddit_info.json().get("data")
+        
+    if data is None:
+        print("Error: Invalid API response. Could not retrieve data.")
         return
     children = data.get("children")
     for child in children:
