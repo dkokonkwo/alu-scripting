@@ -17,15 +17,14 @@ def recurse(subreddit, hot_list=None, after=None, count=0):
     if hot_list is None:
         hot_list = []
 
-    try: 
+    try:
         if after is None:
             subreddit_URL = 'https://www.reddit.com/r/{}/hot.json'.format(
                 subreddit
             )
         else:
-            subreddit_URL = 'https://www.reddit.com/r/{}/hot.json?after={}'.format(
-                subreddit, after
-            )
+            subreddit_URL = 'https://www.reddit.com/r/{}/hot.json?after={}'\
+                .format(subreddit, after)
         subreddit_info = requests.get(
             subreddit_URL,
             headers={'user-agent': 'user'},
@@ -43,4 +42,4 @@ def recurse(subreddit, hot_list=None, after=None, count=0):
             return hot_list
         return (recurse(subreddit, hot_list, after, count))
     except Exception:
-        return "OK"
+        return
