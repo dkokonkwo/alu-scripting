@@ -55,7 +55,7 @@ def count_words(subreddit, word_list, after=None, count={}):
                             j = 1
                             while count[k] == int(result[i + j].split(' ')[1]):
                                 alpha_list.append(result[i + j].split(' ')[0])
-                            alpha_list = alpha_list.sort
+                            alpha_list = alpha_list.sort()
                             for j in range(len(alpha_list)):
                                 if k == alpha_list[j]:
                                     result = result[:i + j] + \
