@@ -28,9 +28,9 @@ def count_words(subreddit, word_list, after=None, count={}):
     if subreddit_info.status_code != 200:
         print("Error: Failed to retrieve data from the Reddit API.")
         return
-        
+
     data = subreddit_info.json().get("data")
-        
+
     if data is None:
         print("Error: Invalid API response. Could not retrieve data.")
         return
